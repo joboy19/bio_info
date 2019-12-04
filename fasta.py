@@ -196,16 +196,13 @@ def dynprogBanded(a, b, in_c, in_d, diag, k):
             crdY -= 1
             
         if mat[(crdX, crdY)][1] == "L":
-            next_val = mat[(crdX-1, crdY)][0]
+            next_val = mat[(crdX-1, crdY-1)][0]
             crdX -= 1
         
         if mat[(crdX, crdY)][1] == "U":
-            next_val = mat[(crdX, crdY-1)][0]
+            next_val = mat[(crdX-1, crdY-1)][0]
             crdY -= 1
     
-    
-        
-
 
     if diag < 0:
         outa, outb = outb, outa
@@ -229,8 +226,6 @@ def nicePrint(mat, a, b):
                        
 
 #a = dynprogBanded("ABC", [[1,-1,-2,-1],[-1,2,-4,-1],[-2,-4,3,-2],[-1,-1,-2,0]], "AABBAACA", "CBACCCBA", 2, 2)
-#c = dynprogBanded("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]],
-#"DDCDDCCCDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCCCDDDCDADCDCDCDCD", "DDCDDCCCDCBCCCCDDDCDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBDCDCDCDCD", 0, 100)
 #a = dynprogBanded("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]], 
 #"AAAAACCDDCCDDAAAAACC", "CCAAADDAAAACCAAADDCCAAAA", 0, 1000)
 
@@ -262,7 +257,7 @@ def test():
     vals = "ABCD"
     timesA = []
     timesB = []
-    valsV = [x*50 for x in range(4, 20)]
+    valsV = [x*10 for x in range(10, 100)]
     for x in valsV:
         string1 = "".join(r.choice(vals) for x in range(x))
         string2 = "".join(r.choice(vals) for x in range(x))
@@ -279,6 +274,6 @@ def test():
     plt.plot(valsV, timesB)
     plt.show()
 
-test()
+
 
 #b = mainEverything("ABC", [[1,-1,-2,-1],[-1,2,-4,-1],[-2,-4,3,-2],[-1,-1,-2,0]], "AAA", "AAA")

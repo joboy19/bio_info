@@ -47,7 +47,7 @@ def dynprog(a, b, c, d):
             if max([i, j, k, 0]) == 0:
                 mat[x][y] = (0, "E")
     
-    nicePrint(mat)
+    #nicePrint(mat)
             
     bestVal = 0 
     for x in range(len1+1):
@@ -86,7 +86,7 @@ def dynprog(a, b, c, d):
 
 #print(dynprog("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]],"DDCDDCCCDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCCCDDDCDADCDCDCDCD", "DDCDDCCCDCBCCCCDDDCDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBDCDCDCDCD"))
 
-
+"""
 a = dynprog("ABCD",
     [[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]], 
     "AAAA", 
@@ -94,9 +94,9 @@ a = dynprog("ABCD",
 
 a = dynprog("ABC", [[1,-1,-2,-1],[-1,2,-4,-1],[-2,-4,3,-2],[-1,-1,-2,0]], "AABBAACA", "CBACCCBA")
 c = dynprog("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]],"DDCDDCCCDCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACCCCDDDCDADCDCDCDCD", "DDCDDCCCDCBCCCCDDDCDBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBDCDCDCDCD")
-
+"""
 
 def nicePrint(mat):
     for x in mat:
         print(x)
-print(c)
+#print(c)

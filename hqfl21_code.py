@@ -472,7 +472,7 @@ def dynprogBanded(a, b, in_c, in_d, diag, k):
             if max([diags, lefts, 0]) == diags:
                 mat[(x+k, j)] = (diags, "D")
             elif max([diags, lefts, 0]) == lefts:
-                mat[(x+k, j)] = (lefts, "U")
+                mat[(x+k, j)] = (lefts, "L")
             elif max([diags, lefts, 0]) == 0: 
                 mat[(x+k, j)] = (0, "E")
         x += 1

@@ -75,6 +75,7 @@ def dynprogBanded(a, b, in_c, in_d, diag, k):
     print("k:", k)
     c = in_c
     d = in_d
+    k=3
     len1 = len(c)
     len2 = len(d)
 
@@ -226,8 +227,8 @@ def nicePrint(mat, a, b):
                        
 
 #a = dynprogBanded("ABC", [[1,-1,-2,-1],[-1,2,-4,-1],[-2,-4,3,-2],[-1,-1,-2,0]], "AABBAACA", "CBACCCBA", 2, 2)
-#a = dynprogBanded("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]], 
-#"AAAAACCDDCCDDAAAAACC", "CCAAADDAAAACCAAADDCCAAAA", 0, 1000)
+a = dynprogBanded("ABCD",[[ 1,-5,-5,-5,-1],[-5, 1,-5,-5,-1],[-5,-5, 5,-5,-4],[-5,-5,-5, 6,-4],[-1,-1,-4,-4,-9]], 
+"AAAAACCDDCBBBBBBBBBBBBBBBBBCDDAAAAACC", "CCAAADDAAAACCAAADDCCAAAA", 0, 2)
 
 #a = dynprogBanded("ABC", [[1,-1,-2,-1],[-1,2,-4,-1],[-2,-4,3,-2],[-1,-1,-2,0]], "AABBA", "CBACC", 3, 3)
 
